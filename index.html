@@ -3,20 +3,124 @@
     <head>
         <meta charset="utf-8">
         <title>Javascript</title>
-        <link rel="stylesheet" href="/styles/maincss.css">
+        <link rel="stylesheet" href="styles/maincss.css">
+        <!--<link href="https://fonts.googleapis.com/css?family=Caveat|Ubuntu" rel="stylesheet">-->
     </head>
     <body>
         <header>
-            <h1>Изучаем jQuery</h1>
+            <h1>Изучаем Javascript</h1>
         </header>
+        <script>
+            document.write('<p>Обучающие уроки по <a href="#">Javascript</a></p>');
+        </script>
         <section>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class="main">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p class="afterall">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, accusantium.</p>
+            <!--<div class="lead">
+                <script>
+                    var str_var = 'Yeah beach!',
+                        int_var = 1488,
+                        bul_var = true;
+                    document.write('str_var = ' + str_var + '; ' + 'int_var = ' + int_var + ', ' + 'bul_var = ' + bul_var + '. ');
+                    int_var = 666;
+                    document.write('Новое значение int_var: ' + int_var);
+                </script>
+            </div>
+            <div class="main">
+                <script>
+                    var a = 'Vasya',
+                        c = 'Pupkin',
+                    console.log('Привет,' + a + ' ' + b + '!');
+                </script>
+                <p><script>
+                    var z = '3',
+                        y = 50,
+                        f = + z + y;//+ или number() перед строкой превращает ее в число
+                    document.write(f);
+                </script>
+                <script>
+                    var q = prompt('Сколько пар обуви вы хотите купить'),
+                        p = 500;
+                    document.write('Это будет стоить вам: ' + (p * q) + ' руб.');
+                </script>
+                <script>
+                    var name = prompt('Как вас зовут ?'),
+                        born = prompt('Назовите год вашего рождения');
+                    console.log(name +', вам ' + (2018-born) + ' лет!');
+                </script>
+                <script>
+                    var name = prompt('Назовите ваше имя'),
+                        born = prompt('Назовите год вашего рождения'),
+                        message = 'Привет ' + name + ', ' + "вам " + (2018-born) + ' лет!';
+                    console.log(message);
+                </script>
+                <script>
+                    var title = 'We wish ' + 'to be friends';
+                console.log(title);
+                </script>
+                <script> //Конкатенация с помощью метода .concat()
+                    var oneday = 'Однажды в студеную зимнюю пору',
+                        message = oneday.concat(' лошадка', ' прилипла', ' пиписькой к забору.');
+                    console.log(message); //метод .concat работает медленнее, чем +=
+                </script>
+                <script>//Метод конкатенации элементов массива в строку .join()
+                    var cats = ['Аба', 'Сруся', 'Пира', 'Гами', 'Попа', 'Нелям', 'Разнесу'],
+                        joinedNames = cats.join(', '); //В скобках указан типа разделителя в строке (запятая и пробел)
+                    console.log(joinedNames);//метод .join() работает медленнее, чем +=)
+                </script>
+                <script>
+                    var counter = 10;
+                counter++;
+                console.log(counter);
+                </script>
+            </div>-->
+            <div>
+                <h3>Комбинированные операции</h3>
+                <h4>Создание html-кода ссылки</h4>
+                <p id="createLink"></p>
+                <button onclick="createLink()">Создать ссылку</button>
+            </div>
+            <div>
+                <h3>Расчёт процента от суммы</h3>
+                <h4>Введите количество рублей и процент для рассчёта.</h4>
+                <p id="countPercent"></p>
+                <button onclick="countPercent()">Рассчитать процент</button>
+            </div>
+            <div>
+                <img src="images/pic3.jpg">
+                <h3>Массивы</h3>
+                <p id="population"></p>
+            </div>
         </section>
-    <script src="script/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="script/mainscript.js" type="text/javascript"></script>
+        <section>
+            <div class="wrapper">
+                <h3>Ежедневник</h3>
+                <form class="planner" method="get">
+                    <p><label for="day">День недели:</label>
+                        <select name="week" id="day">
+                            <option value="Monday">Понедельник</option>
+                            <option value="Tuesday">Вторник</option>
+                            <option value="Wednesday">Среда</option>
+                            <option value="Thuresday">Четверг</option>
+                            <option value="Friday">Пятница</option>
+                            <option value="Saturday">Суббота</option>
+                            <option value="Sunday">Воскресенье</option>
+                        </select></p>
+                    <p><textarea id="note" cols="30" rows="10" autofocus placeholder="Напишите текст заметки..."></textarea></p>
+                    <p>
+                        <button onclick="mySend()">Отправить</button>
+                        <button onclick="myPrint()">Распечатать</button>
+                    </p>
+                </form>
+                <div id="printed"></div>
+            
 
-    </script>
+        </section>
+
+
+
+        <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="script/mainscript.js" type="text/javascript"></script>
     </body>
 </html>
